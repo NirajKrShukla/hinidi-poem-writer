@@ -11,7 +11,9 @@ function App() {
   const [lines, setLines] = useState(8);
   const [rhyme, setRhyme] = useState("auto");
   const [poem, setPoem] = useState("");
-  const [validation, setValidation] = useState(null);\n  const [txtUrl, setTxtUrl] = useState("");\n  const [csvUrl, setCsvUrl] = useState("");
+  const [validation, setValidation] = useState(null);
+  const [txtUrl, setTxtUrl] = useState("");
+  const [csvUrl, setCsvUrl] = useState("");
   const [voiceFile, setVoiceFile] = useState(null);
   const [photo, setPhoto] = useState(null);
   const [voiceId, setVoiceId] = useState("");
