@@ -5,27 +5,26 @@ import "./styles.css";
 const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 function App() {
-  const [prompt, setPrompt] = useState("");
-  const [style, setStyle] = useState("muktak");
-  const [emotion, setEmotion] = useState("गंभीर और आशावादी");
-  const [lines, setLines] = useState(8);
-  const [rhyme, setRhyme] = useState("auto");
-  const [poem, setPoem] = useState("");
-  const [validation, setValidation] = useState(null);
-  const [txtUrl, setTxtUrl] = useState("");
-  const [csvUrl, setCsvUrl] = useState("");
-  const [voiceFile, setVoiceFile] = useState(null);
-  const [photo, setPhoto] = useState(null);
-  const [voiceId, setVoiceId] = useState("");
-  const [audioUrl, setAudioUrl] = useState("");
-  const [videoUrl, setVideoUrl] = useState("");
-  const [busy, setBusy] = useState(false);
-  const [status, setStatus] = useState("");
-  const [token, setToken] = useState(localStorage.getItem("hindi_poem_token") || "");
-  const authHeaders = () => token ? {"Authorization": `Bearer ${token}`} : {};
-
-  const recorderRef = useRef(null);
-  const chunksRef = useRef([]);
+    const [prompt, setPrompt] = useState("");
+    const [style, setStyle] = useState("muktak");
+    const [emotion, setEmotion] = useState("गंभीर और आशावादी");
+    const [lines, setLines] = useState(8);
+    const [rhyme, setRhyme] = useState("auto");
+    const [poem, setPoem] = useState("");
+    const [validation, setValidation] = useState(null);
+    const [txtUrl, setTxtUrl] = useState("");
+    const [csvUrl, setCsvUrl] = useState("");
+    const [voiceFile, setVoiceFile] = useState(null);
+    const [photo, setPhoto] = useState(null);
+    const [voiceId, setVoiceId] = useState("");
+    const [audioUrl, setAudioUrl] = useState("");
+    const [videoUrl, setVideoUrl] = useState("");
+    const [busy, setBusy] = useState(false);
+    const [status, setStatus] = useState("");
+    const [token, setToken] = useState(localStorage.getItem("hindi_poem_token") || "");
+    const authHeaders = () => token ? { "Authorization": `Bearer ${token}` } : {};
+    const recorderRef = useRef(null);
+    const chunksRef = useRef([]);
 
   async function generate() {
     setBusy(true); setStatus("कविता लिखी जा रही है…");
