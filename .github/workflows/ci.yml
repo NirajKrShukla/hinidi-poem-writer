@@ -12,9 +12,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=${{ github.workspace }}/backend" >> $GITHUB_ENV
       - run: pip install -r backend/requirements.txt
       - run: python -m compileall -q backend/app backend/tests
-      - run: pytest -q
+      - name: Run backend tests
+        run: pytest -q
         working-directory: backend
 
   frontend:
