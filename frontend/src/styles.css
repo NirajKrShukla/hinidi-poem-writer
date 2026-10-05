@@ -17,7 +17,30 @@ button:disabled { opacity:.45; cursor:not-allowed; }
 .primary { width:100%; margin-top:16px; background:#2b211a; color:white; padding:15px; }
 .record { margin-top:10px; }
 .poem { white-space:pre-wrap; min-height:280px; padding:22px; border-radius:16px; background:#faf8f5; font-size:20px; line-height:2; }
-.validation { margin-top:12px; padding:12px; border-radius:12px; background:#f0eee8; }
+.validation {
+  margin-top:12px;
+  padding:12px;
+  border-radius:12px;
+  background:#f0eee8;
+  color:#756b63;
+  font-size:14px;
+}
+
+/* Toast styles */
+.toast {
+  min-width: 220px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  color: #111;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.toast-success { background: linear-gradient(180deg,#e6ffed,#c9f7d6); border: 1px solid #9be6a6; }
+.toast-error { background: linear-gradient(180deg,#ffecec,#ffd6d6); border: 1px solid #f2a2a2; }
+.toast-info { background: linear-gradient(180deg,#eef6ff,#d7eaff); border: 1px solid #b7d3ff; }
+
+.toast { opacity: 0; transform: translateY(-6px); transition: opacity 0.28s ease, transform 0.28s ease; }
+.toast.visible { opacity: 1; transform: translateY(0); }
 .muted { color:#756b63; font-size:14px; }
 audio, video { width:100%; margin-top:16px; border-radius:12px; }
 footer { padding:24px 4px; color:#74695f; text-align:center; }
