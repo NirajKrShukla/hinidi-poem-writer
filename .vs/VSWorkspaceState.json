@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\backend",
+    "\\backend\\.pytest_cache",
+    "\\backend\\tests",
+    "\\frontend",
+    "\\frontend\\src"
+  ],
+  "PreviewInSolutionExplorer": false
+}
